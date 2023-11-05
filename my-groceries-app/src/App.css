@@ -1,0 +1,145 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1c1c1c; /* Ensures the background color covers any space not filled by .App */
+}
+
+h1 {
+  color: white; /* ensures the title is white */
+  /* Add any other styles you wish to apply to the title */
+}
+
+
+.GroceriesApp-Container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  min-width: 550px;
+}
+
+.CartList-Container {
+  width: 25%;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+
+.CartList-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px wheat solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.CartList-Card-Info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Inventory-Container {
+  width: 75%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+
+.Inventory-Card {
+  width: 25%;
+  border: 2px wheat solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.Inventory-Card button {
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white for visibility */
+  border: none; /* Optional: remove the border if there is one */
+  padding: 10px 20px; /* Optional: add some padding for better appearance */
+  cursor: pointer; /* Optional: set the cursor to pointer to indicate it's clickable */
+  border-radius: 5px; /* Optional: add border radius for rounded corners */
+  margin-top: 10px; /* Optional: add margin to the top for spacing */
+}
+
+/* If you have other buttons you want to exclude from this style, add a specific class to the "Add to Cart" button and target that class instead. For example: */
+.AddToCartButton {
+  background-color: black; /* Set the background color to black */
+  /* Other styles as above */
+}
+
+
+img {
+  height: 50px;
+  border-radius: 5px;
+}
+
+.counter-container {
+  /* border: 1px solid white; */
+  display: flex;
+  width: 70%;
+  height: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.counter-button {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.CartList-Buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line if there is not enough space */
+  gap: 10px; /* Adds space between buttons when they wrap */
+}
+
+.Remove-Button,
+.Empty-Cart-Button,
+.Buy-Total-Button {
+  background-color: rgb(190, 0, 0); /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Adjust padding to fit the container */
+  font-size: 1rem; /* Font size, adjust as needed */
+  border-radius: 20px; /* Curved edges */
+  cursor: pointer; /* Indicates that the button is clickable */
+  border: none; /* No border */
+  margin: 5px; /* Smaller margin to fit within the container */
+  width: auto; /* Adjusts the width automatically based on content size */
+  flex: 1 1 auto; /* Allows buttons to grow and shrink as needed */
+}
+
+.Buy-Total-Button {
+  background-color: green; /* Green background for Buy-Total button */
+}
+
+/* Additional media query to handle responsiveness */
+@media (max-width: 600px) {
+  .Remove-Button,
+  .Empty-Cart-Button,
+  .Buy-Total-Button {
+    padding: 10px; /* Smaller padding on smaller screens */
+    font-size: 0.8rem; /* Smaller font size on smaller screens */
+    flex-basis: 100%; /* Each button takes full width on its own line */
+  }
+}
